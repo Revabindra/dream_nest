@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+ import { useEffect, useState } from "react";
 import { categories } from "../data";
 import "../styles/Listings.scss";
 import ListingCard from "./ListingCard";
