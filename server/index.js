@@ -13,6 +13,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
+
+app.get("/", (req, res) => {
+  res.send("Dream Nest backend is live 🚀");
+});
+
 /* ROUTES */
 app.use("/auth", authRoutes)
 app.use("/properties", listingRoutes)
