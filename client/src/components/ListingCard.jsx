@@ -156,7 +156,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setWishList } from "../redux/state";
-import BACKEND_URL from "../config"; // ✅ added for backend link
+import BASE_URL from "../config"; // ✅ added for backend link
 
 const ListingCard = ({
   listingId,
@@ -199,7 +199,7 @@ const ListingCard = ({
   const patchWishList = async () => {
     if (user?._id !== creator._id) {
       const response = await fetch(
-        `${BACKEND_URL}/users/${user?._id}/${listingId}`,
+        `${BASE_URL}/users/${user?._id}/${listingId}`,
         {
           method: "PATCH",
           headers: {
@@ -229,7 +229,7 @@ const ListingCard = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
               <img
-                src={`${BACKEND_URL}/${photo?.replace("public", "")}`}
+                src={`${BASE_URL}/${photo?.replace("public", "")}`}
                 alt={`photo ${index + 1}`}
               />
               <div

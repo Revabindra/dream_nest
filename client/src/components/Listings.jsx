@@ -98,7 +98,7 @@ import ListingCard from "./ListingCard";
 import Loader from "./Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { setListings } from "../redux/state";
-import BACKEND_URL from "../config"; // ✅ yeh import karna zaruri hai
+import BASE_URL from "../config"; // ✅ yeh import karna zaruri hai
 
 const Listings = () => {
   const dispatch = useDispatch();
@@ -111,8 +111,8 @@ const Listings = () => {
     try {
       const url =
         selectedCategory !== "All"
-          ? `${BACKEND_URL}/properties?category=${selectedCategory}`
-          : `${BACKEND_URL}/properties`;
+          ? `${BASE_URL}/properties?category=${selectedCategory}`
+          : `${BASE_URL}/properties`;
 
       const response = await fetch(url, {
         method: "GET",

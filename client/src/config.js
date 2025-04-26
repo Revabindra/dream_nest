@@ -1,3 +1,4 @@
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-export default BACKEND_URL;
+export default BASE_URL;
+

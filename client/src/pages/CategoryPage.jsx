@@ -87,7 +87,7 @@ import { setListings } from "../redux/state";
 import Loader from "../components/Loader";
 import ListingCard from "../components/ListingCard";
 import Footer from "../components/Footer";
-import BACKEND_URL from "../config"; // ✅ import backend url
+import BASE_URL from "../config"; // ✅ import backend url
 
 const CategoryPage = () => {
   const [loading, setLoading] = useState(true);
@@ -99,7 +99,7 @@ const CategoryPage = () => {
   const getFeedListings = async () => {
     try {
       const response = await fetch(
-        `${BACKEND_URL}/properties?category=${category}`, // ✅ updated
+        `${BASE_URL}/properties?category=${category}`, // ✅ updated
         {
           method: "GET",
         }

@@ -111,7 +111,7 @@ import { useSelector, useDispatch } from "react-redux";
 import "../styles/Navbar.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { setLogout } from "../redux/state";
-import BACKEND_URL from "../config"; // ✅ import backend url
+import BASE_URL from "../config"; // ✅ import backend url
 
 const Navbar = () => {
   const [dropdownMenu, setDropdownMenu] = useState(false);
@@ -163,7 +163,7 @@ const Navbar = () => {
             <Person sx={{ color: variables.darkgrey }} />
           ) : (
             <img
-              src={`${BACKEND_URL}/${user.profileImagePath.replace("public", "")}`} // ✅ updated
+              src={`${BASE_URL}/${user.profileImagePath.replace("public", "")}`} // ✅ updated
               alt="profile photo"
               style={{ objectFit: "cover", borderRadius: "50%" }}
             />
