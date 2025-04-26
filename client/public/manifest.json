@@ -1,0 +1,15 @@
+{
+    "short_name": "DreamNest",
+    "name": "Dream Nest - Find Your Dream Home",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#1976d2",
+    "background_color": "#ffffff",
+    "orientation": "portrait",
+    "description": "Dream Nest helps you find and manage your dream homes with ease!",
+    "scope": "/",
+    "id": "/",
+    "prefer_related_applications": false
+  }
+  
+  
